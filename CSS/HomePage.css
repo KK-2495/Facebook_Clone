@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+}
+.screen{
+    color: #e7e7e7;
+    background-color: #242526;
+    /* height: 600px; */
+}
+.navBar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #5f5f5f;
+    background-color: black;
+    z-index: 1;
+}
+.fbLogo{
+    font-weight: bold;
+    font-size: 29px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+.search{
+    border-radius: 20px;
+    background-color: #414242;
+    padding: 12px;
+    width: 40%;
+}
+.search i{
+    color: #7d7d7d;
+}
+.search input{
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background-color: #414242;
+    padding: 0px 5px;
+}
+.message{
+    width: 10%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.message>i {
+    /* border: 1px solid gray; */
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #414242;
+}
+
+.profileImage{
+    width: 30%;
+}
+.profileImage img{
+    width: 100%;
+    border-radius: 50%;
+}
+.profileSettings{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    padding: 20px;
+    border: 1px solid #434343;
+    border-radius: 15px;
+    width: 28%;
+    background-color: black;
+}
+.settingsUserProfile{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.settingsUserProfile:hover{
+    background-color: #414242;
+    border-radius: 10px;
+}
+.settingsProfileImage{
+    width: 15%;
+}
+.settingsProfileImage img{
+    width: 100%;
+    border-radius: 50%;
+}
+.settingsUserName{
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.settingsIcon{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.settingsIcon>i{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #414242;
+}
+.settingsIcon>b{
+    padding-left: 10px;
+    font-size: 14px;
+}
+.settingsIcon:hover{
+    background-color: #414242;
+    border-radius: 15px;
+}
+.content{
+    padding-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.navLeftBar{
+    width: 23%;
+    overflow: auto;
+    max-height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.navLeftBar::-webkit-scrollbar{
+    width: 10px;
+    background-color: #5f5f5f;
+}
+.navLeftBar::-webkit-scrollbar-thumb{
+    background-color: #7d7d7d;
+    border-radius: 20px;
+}
+.home{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    font-size: 20px;
+}
+.home > i{
+    color: #2e89ff;
+}
+.home:hover{
+    background-color: #414242;
+    border-radius: 15px;
+}
+.home>b{
+    padding-left: 25px;
+    font-size: 15px;
+}
+.homeUserProfile{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+.homeUserProfile:hover{
+    background-color: #414242;
+    border-radius: 15px;
+}
+.homeUserGroup{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+}
+.homeUserGroup:hover{
+    background-color: #414242;
+    border-radius: 15px;
+}
+.homeShortcut{
+    display: flex;
+    align-items: center;
+    padding: 10px;;
+}
+.homeShortcut:hover{
+    background-color: #414242;
+    border-radius: 15px;
+}
+.newsFeed{
+    overflow: auto;
+    max-height: 100vh;
+    width: 40%;
+    margin: auto;
+    margin-top: 2%;
+    /* border: 1px solid white; */
+    padding-bottom: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.newsFeed::-webkit-scrollbar {
+    display: none;
+}
+.storyIcon{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5%;
+}
+.storiesIcon{
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.storiesIcon>i{
+    font-size: 25px;
+    padding: 5px;
+    color: #2e89ff;
+}
+.storyImage{
+    display: flex;
+    justify-content: space-between;
+}
+.storyImages{
+    /* border: 2px solid blue; */
+    width: 23%;
+    height: 180px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px;
+}
+.storyImages img{
+    width: 100%;
+    scale: 2.6;
+    /* opacity: 0.5; */
+}
+.storyImages p{
+    position: relative;
+    color: white;
+}
+.status{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #5f5f5f;
+}
+.statusImage{
+    width: 10%;
+}
+.statusImage img{
+    width: 100%;
+    border-radius: 50%;
+}
+.updateStatus{
+    width: 85%;
+}
+.updateStatus button{
+    width: 100%;
+    background-color: #5f5f5f;
+    color: #d1d1d1;
+    border-radius: 25px;
+    font-size: 15px;
+    text-align: left;
+    display: flex;
+    padding: 15px;
+    border: none;
+}
+.liveVideo{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.liveActivity{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+.liveActivity:hover{
+    background-color: #434343;
+    border-radius: 20px;
+}
+.activityImage{
+    width: 20%;
+}
+.activityImage img{
+    width: 100%;
+}
+.createPost{
+    display: none;
+    border-radius: 20px;
+    background-color: #414242;
+    position: absolute;
+    width: 35%;
+    padding: 20px;
+}
+.createPostTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.createPostTitle i{
+    padding: 10px;
+}
+.createPostTitle i:hover{
+    border-radius: 50%;
+    background-color: #5f5f5f;
+}
+.createPost input{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5%;
+}
+.createPostsubmit{
+    background-color: #2e89ff;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.post{
+    margin-top: 10%;
+    background-color: #333333;
+    padding: 5px;
+    border-radius: 20px;
+}
+.postProfile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.postProfileImage{
+    width: 10%;
+}
+.postProfileImage img{
+    width: 100%;
+    border-radius: 50%;
+}
+.postProfileName{
+    width: 65%;
+    text-align: left;
+}
+.postOption{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.postOption i{
+    padding: 10px;
+    border-radius: 50%;
+}
+.postOption i:hover{
+    background-color: #5f5f5f;
+}
+.postCaption{
+    padding: 10px;
+}
+.postImage img{
+    width: 100%;
+}
+.postLikes{
+    width: 95%;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #7d7d7d;
+}
+.postLikeOption{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.navRightBar{
+    width: 20%;
+    overflow: auto;
+    max-height: 100vh;
+    scrollbar-color: red;
+}
+.navRightBar::-webkit-scrollbar{
+    width: 10px;
+    background-color: #5f5f5f;
+}
+.navRightBar::-webkit-scrollbar-thumb{
+    background-color: #7d7d7d;
+    border-radius: 20px;
+}
+.contacts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.contactIcons > i{
+    padding: 8px;
+}
+.contactIcons > i:hover{
+    background-color: #434343;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:770px) {
+    .search{
+        display: none;
+    }
+    .message{
+        width: 20%;
+    }
+    .navRightBar{
+        display: none;
+    }
+}

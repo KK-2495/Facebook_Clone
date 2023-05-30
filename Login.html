@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="./CSS/Register.css">
+    </head>
+
+    <body>
+        <div class="screen">
+            <div class="register">
+                <div class="fbLogo">
+                    <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="fb logo" />
+                </div>
+                <div class="form">
+                    <div class="formTitle">
+                        <h2>Log in to Facebook</h2>
+                    </div>
+                    <div class="registerForm">
+                        <form onsubmit="login(event)">
+                            <input id="email" type="email" placeholder="Enter Your Email" />
+                            <input id="password" type="password" placeholder="Enter the Password" />
+                            <input id="loginButton" type="submit" value="Log In" />
+                        </form>
+                        <p onclick="redirectRegister()" class="login">Sign up for Facebook ?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./JS/userData.js"></script>
+    </body>
+
+</html>

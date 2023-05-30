@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.register{
+    padding-bottom: 6%;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fbLogo{
+    width:25%;
+}
+.fbLogo img{
+    width: 100%;
+}
+.form{
+    background-color: white;
+    width: 35%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #afafaf;
+    text-align: center;
+}
+.formTitle{
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+.registerForm{
+    padding: 20px;
+}
+.registerForm input{
+    width: 100%;
+    margin-top: 2%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    font-size: 15px;
+}
+.dob {
+    padding-top: 5%;
+    text-align: left;
+}
+.dobOptions{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.dobOptions select{
+    width: 31%;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+/* .gender{
+    padding-top: 5%;
+    text-align: left;
+}
+.genderOptions{
+    display: flex;
+    justify-content: space-between;
+}
+.genderOption{
+    width: 30%;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+.genderOption input[type=radio]{
+    width: 15%;
+} */
+.terms {
+    text-align: left;
+    padding: 10px 0px;
+}
+.terms small{
+    font-size: 12px;
+}
+.registerForm input[type=submit]{
+    background-color: #00a400;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    width: 50%;
+    padding: 5px;
+}
+#loginButton{
+    width: 100%;
+    background-color: #1877f2;
+    padding: 10px;
+}
+.login{
+    color: #1877f2;
+    margin-top: 5%;
+}

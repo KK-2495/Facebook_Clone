@@ -120,6 +120,7 @@
     padding-top: 5%;
     display: flex;
     justify-content: space-between;
+    /* position: relative; */
 }
 .navLeftBar{
     width: 23%;
@@ -285,6 +286,7 @@
 .activityImage img{
     width: 100%;
 }
+
 .createPost{
     display: none;
     border-radius: 20px;
@@ -292,6 +294,7 @@
     position: absolute;
     width: 35%;
     padding: 20px;
+    box-shadow: 1px 1px 100px rgb(155, 155, 155);
 }
 .createPostTitle{
     display: flex;
@@ -321,10 +324,16 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .post{
-    margin-top: 10%;
-    background-color: #333333;
+    margin-top: 5%;
+}
+.fbPost{
     padding: 5px;
     border-radius: 20px;
+    background-color: #333333;
+    /* border: 2px solid red; */
+    box-shadow: 1px 1px 10px 1px #7caff1;
+    /* box-shadow: rgba(60, 60, 202, 0.2) 0px 7px 29px 0px; */
+    margin-top: 10%;
 }
 .postProfile{
     display: flex;

@@ -55,7 +55,7 @@
                         </div>
                         <div class="settingsIcon">
                             <i class="fa-solid fa-right-from-bracket"></i>
-                            <b id="logOut">Log In</b>
+                            <b onclick="login()" id="logOut">Log In</b>
                         </div>
                     </div>
                 </div>
@@ -223,38 +223,40 @@
                         </div>
                     </div>
                     <div id="uploadPost" class="post">
-                        <div class="postProfile">
-                            <div class="postProfileImage">
-                                <img src="https://scontent.fbom28-1.fna.fbcdn.net/v/t39.30808-6/294699813_4626468690786576_4190628195338301237_n.jpg?stp=dst-jpg_s851x315&_nc_cat=108&ccb=1-7&_nc_sid=da31f3&_nc_ohc=gWbGV4WWG7YAX_CXay5&_nc_ht=scontent.fbom28-1.fna&oh=00_AfDtLmA1FPeNIzaSSsckMDKXadCckCI8LfNVgttKIDKrJA&oe=647AB6E2"
-                                    alt="story" />
+                        <div class="fbPost">
+                            <div class="postProfile">
+                                <div class="postProfileImage">
+                                    <img src="https://scontent.fbom28-1.fna.fbcdn.net/v/t39.30808-6/294699813_4626468690786576_4190628195338301237_n.jpg?stp=dst-jpg_s851x315&_nc_cat=108&ccb=1-7&_nc_sid=da31f3&_nc_ohc=gWbGV4WWG7YAX_CXay5&_nc_ht=scontent.fbom28-1.fna&oh=00_AfDtLmA1FPeNIzaSSsckMDKXadCckCI8LfNVgttKIDKrJA&oe=647AB6E2"
+                                        alt="story" />
+                                </div>
+                                <div id="userName3" class="postProfileName">
+                                    Krishna
+                                </div>
+                                <div class="postOption">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                    <i class="closePost()" class="fa-solid fa-x"></i>
+                                </div>
                             </div>
-                            <div id="userName3" class="postProfileName">
-                                Krishna
+                            <div class="postCaption">
+                                𓂀 𝐓𝐑𝐀𝐕𝐄𝐋 𝐢𝐬 𝐑𝐞𝐜𝐞𝐬𝐬 𝐀𝐧𝐝 𝐖𝐞 𝐧𝐞𝐞𝐝 𝐢𝐭.𓂀
                             </div>
-                            <div class="postOption">
-                                <i class="fa-solid fa-ellipsis"></i>
-                                <i class="closePost()" class="fa-solid fa-x"></i>
+                            <div class="postImage">
+                                <img src="https://scontent.fbom28-1.fna.fbcdn.net/v/t39.30808-6/291982897_4575355212564591_6320168755546741088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=2QJq6hXyLlkAX-ybyZ-&_nc_ht=scontent.fbom28-1.fna&oh=00_AfDotGZQMoKwhHEwAMbitBOstGT4RQjRzZt2y8XBdIy2yQ&oe=64799E82"
+                                    alt="post Image" />
                             </div>
-                        </div>
-                        <div class="postCaption">
-                            𓂀 𝐓𝐑𝐀𝐕𝐄𝐋 𝐢𝐬 𝐑𝐞𝐜𝐞𝐬𝐬 𝐀𝐧𝐝 𝐖𝐞 𝐧𝐞𝐞𝐝 𝐢𝐭.𓂀
-                        </div>
-                        <div class="postImage">
-                            <img src="https://scontent.fbom28-1.fna.fbcdn.net/v/t39.30808-6/291982897_4575355212564591_6320168755546741088_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=730e14&_nc_ohc=2QJq6hXyLlkAX-ybyZ-&_nc_ht=scontent.fbom28-1.fna&oh=00_AfDotGZQMoKwhHEwAMbitBOstGT4RQjRzZt2y8XBdIy2yQ&oe=64799E82"
-                                alt="post Image" />
-                        </div>
-                        <div class="postLikes">
-                            <div class="postLikeOption">
-                                <i class="fa-regular fa-thumbs-up"></i>
-                                <p>Like</p>
-                            </div>
-                            <div class="postLikeOption">
-                                <i class="fa-regular fa-message"></i>
-                                <p>Comment</p>
-                            </div>
-                            <div class="postLikeOption">
-                                <i class="fa-solid fa-share"></i>
-                                <p>Share</p>
+                            <div class="postLikes">
+                                <div class="postLikeOption">
+                                    <i class="fa-regular fa-thumbs-up"></i>
+                                    <p>Like</p>
+                                </div>
+                                <div class="postLikeOption">
+                                    <i class="fa-regular fa-message"></i>
+                                    <p>Comment</p>
+                                </div>
+                                <div class="postLikeOption">
+                                    <i class="fa-solid fa-share"></i>
+                                    <p>Share</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -465,12 +467,19 @@
                 var fbCurrentUserData = JSON.parse(localStorage.getItem("fbCurrentUser"));
                 var fbUserData = JSON.parse(localStorage.getItem("fbUsers"));
                 var uploadPost = document.getElementById("uploadPost");
-                var fbUploadPost = "";
-                var homeUpload = ""
-                for(var i=0; i<fbUserData.length; i++){
-                    if(fbUserData[i].fEmail == fbCurrentUserData.fEmail){
-                        fbUserData[i].fPosts = fbUploadPost;
-                        homeUpload += `<div class="postProfile">
+                var fbUploadPost = [];
+                var homeUpload = "";
+
+                for (var i = 0; i < fbUserData.length; i++) {
+                    if (fbCurrentUserData.fEmail == fbUserData[i].fEmail) {
+
+                        fbUploadPost = fbUserData[i].fPosts;
+                    }
+                }
+
+                console.log(fbUploadPost);
+                for (var i = 0; i < fbUploadPost.length; i++) {
+                    homeUpload += `<div class="fbPost"><div class="postProfile">
                             <div class="postProfileImage">
                                 <img src="https://scontent.fbom28-1.fna.fbcdn.net/v/t39.30808-6/294699813_4626468690786576_4190628195338301237_n.jpg?stp=dst-jpg_s851x315&_nc_cat=108&ccb=1-7&_nc_sid=da31f3&_nc_ohc=gWbGV4WWG7YAX_CXay5&_nc_ht=scontent.fbom28-1.fna&oh=00_AfDtLmA1FPeNIzaSSsckMDKXadCckCI8LfNVgttKIDKrJA&oe=647AB6E2"
                                     alt="story" />
@@ -484,10 +493,10 @@
                             </div>
                         </div>
                         <div class="postCaption">
-                           ${fbUploadPost[i].postCaption}
+                            ${fbUploadPost[i].postCaption}
                         </div>
                         <div class="postImage">
-                            <img src="${fbUserData[i].fPosts.fProfileImage}"
+                            <img src="${fbUploadPost[i].postImage}"
                                 alt="post Image" />
                         </div>
                         <div class="postLikes">
@@ -503,10 +512,16 @@
                                 <i class="fa-solid fa-share"></i>
                                 <p>Share</p>
                             </div>
-                        </div>`;
-                    }
+                        </div></div>`;
                 }
+
                 uploadPost.innerHTML = homeUpload;
+
+
+
+            }
+            function login() {
+                window.location.href = `./Login.html`;
             }
             function logout() {
                 localStorage.removeItem("fbCurrentUser");
